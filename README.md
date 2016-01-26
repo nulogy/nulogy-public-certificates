@@ -1,4 +1,4 @@
-# Nulogy Axway-Test environment x509 Certificates
+# Nulogy Public x509 Certificates
 > Published January 2016
 
 ## Introduction
@@ -7,11 +7,11 @@ Nulogy has developed a set of self-signed x509 certificates in a hierarchy of tr
 
 When deployed properly by administrators, these assets can reduce operational and security risks as well as administrator costs.
 
-These certificates ensure Secure FTP, AS2 and HTTPS communications with Nulogy's environment are encrypted and authenticated.
+These certificates allow Secure FTP, AS2 and HTTPS communications with Nulogy's environment to be encrypted and authenticated.
 
-NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](https://sites.google.com/site/itstheshappening/) Do not use the provided SHA-1 certificates if your systems support the superior SHA-256 algorithm. Nulogy Corporation is not responsible for security risks resulting from your choice to use our SHA-1 certificates. SHA-1 certificates are provided to facilitate your migration to secure services before SHA-1 is sunset permanently.
+NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](https://sites.google.com/site/itstheshappening/) Do not use the provided SHA-1 certificates if your systems support the superior SHA-256. Nulogy Corporation is not responsible for security risks resulting from your choice to use our SHA-1 certificates. SHA-1 certificates are provided to facilitate your migration to secure services before SHA-1 is sunset permanently.
 
-## Which should I install?
+## Choosing a Certificate to Use
 
 
 Which certificate you choose to install in your trust store is up to you, but you should prefer to install the highest certificate in the chain: the Nulogy Root CA4. This will significantly reduce the need for future configuration changes.
@@ -23,32 +23,64 @@ If your client software, or your internal processes do not allow you to use trus
 
 If you choose to do so, note: the likelihood that we will have to revoke and reissue this certificate within the coming years is very high. If this occurs, and you do not include I4 or CA4 in your trust store, your applications will fail to communicate with our servers. We will give as much notice as possible for this, but for security reasons we may be forced to revoke this certificate immediately, without notice.
 
-## Expiry Dates
+## Scheduled Expiry Dates
 
-Please check the expiry date on the certificate you install. 
+Please check the expiry date on the certificate you install. To do so, you may wish to use the OpenSSL utility included with most Unix-like operating systems:
 
-You may wish to add a calendar event several months before the expiry, to ensure you are reminded of the requirement to rotate the certificate before it expires.
+```
+$ openssl x509 -text -noout -in 000-root-ca4.crt
+ ... 
+        Validity
+            Not Before: Oct  7 10:48:37 2015 GMT
+            Not After : Oct  6 10:48:37 2025 GMT
+        Subject: C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Infrastructure, CN=Nulogy Root CA 4
+ ...
+```
+
+In the case of certificates with shorter expiry, you may wish to add a calendar event to remind you prior to the date.
 
 ## Validating the Root Certificate
 
-Either: 
+Validating the authenticity of our SSL certificates can be done via several means.
 
-- You may fetch https://nulogy.com/nulogy-root-ca4.crt - which is served over HTTPS, signed by our Nulogy.com wildcard from RapidSSL.
+It is your responsibility to validate the authenticity of the Nulogy Root certificate you trust. 
 
-Or:
+It is safest to verify the key is valid over as many means as possible.
 
-- Get nulogy-root-ca4.crt from http://ca4.nulogy.com
-- Verify the GPG signature from our Infrastructure Team Lead, `Ian Penney <ianp@nulogy.com>`, using GPG Key `B52FEE3604963DD2`.
+Failing to do so may void your customer agreements and leave you vulnerable to Man in The Middle (MitM) attacks.
 
-Further:
 
-- A signature from GPG Key `B52FEE3604963DD2` has been published to DNS Text record, ianp.identity.nulogy.com, verifying that ianp has control over the Nulogy.com domain. A proof has also been published at https://nulogy.com/keybase.txt
-- The GPG key is registered at https://keybase.io/ with a series of social proofs for validation.
-- The GPG key used is also printed on the keyholder's business cards, if you have one.
+### via HTTPS
 
-Or:
+- You may fetch https://nulogy.com/nulogy-root-ca4.crt - which is served over HTTPS
 
-- Contact your Nulogy support representative for manual confirmation of the key fingerprint.
+*** You must verify the HTTPS connection is authentic *** 
+
+- Validate the connection was signed and secured by our Nulogy.com certificate from RapidSSL. 
+- The corresponding `GeoTrust Primary Certification Authority` should be available in all modern operating systems.
+
+
+### via GPG
+
+- Obtain nulogy-root-ca4.crt and its signature from this repository or from http://ca4.nulogy.com
+- Verify the GPG signature `000-root-ca4.crt.signed.asc` from our Infrastructure Team Lead, `Ian Penney <ianp@nulogy.com>`, using GPG Key `B52FEE3604963DD2`.
+
+*** You must verify the GPG key is authentic *** 
+
+- Obtain the GPG key owned by `Ian Penney <ianp@nulogy.com>` from https://keybase.io/ian_nulogy 
+- The GPG key is registered at https://keybase.io/ and proofs are posted in the following locations:
+  - https://nulogy.com/keybase.txt confirms ianp@nulogy.com has control over the nulogy.com website.
+  - https://gist.github.com/nulogyian/44b8426e3584a3cc1ea1
+    - Proves the key owner is github user `nulogyian`. 
+    - Note that https://github.com/nulogyian is a member of https://github.com/nulogy. (Unfortunately, gists for organizations are not allowed.)
+  - https://keybase.io/ian_nulogy/sigchain#a420b04c3d429014a03b4d6cf62a19fc59ca63ebb1745b23ac6c3c370b1c76ca0f 
+    - A signature from GPG Key `B52FEE3604963DD2` has been published to DNS Text record, ianp.identity.nulogy.com, verifying that "Ian Penney <ianp@nulogy.com>" has control over the Nulogy.com domain. A proof has also been published at https://nulogy.com/keybase.txt
+- Nulogy frequently prints our GPG fingerprint IDs on our business cards.
+
+### via Phone
+
+- If you are having difficulty Validating the Nulogy Root certificate contact your Nulogy support representative. 
+- We may be able to help you validate the key's fingerprint over the phone, via Mail, or over another acceptable channel.
 
 
 ## Contents
