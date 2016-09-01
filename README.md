@@ -1,5 +1,5 @@
 # Nulogy Public x509 Certificates
-> Published January 2016
+> Updated August 2016
 
 ## Introduction
 
