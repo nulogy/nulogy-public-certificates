@@ -100,8 +100,9 @@ The files contained in this repository are as follows.
   - `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Integrations, CN=axway.nulogy.net`
 - 005-axway.nulogy.net-i4-sha256.crt - B2Bi Production Certificate, with SHA-256 Signatures by I4
  - `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Integrations, CN=axway.nulogy.net`
-- 100-axway.nulogy.net-geotrust-sha256.crt - B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
- - `1.3.6.1.4.1.311.60.2.1.3=CA/1.3.6.1.4.1.311.60.2.1.2=Ontario/businessCategory=Private Organization/serialNumber=2018280, C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Infrastructure, CN=axway.nulogy.net`
+- ~~~100-axway.nulogy.net-geotrust-sha256.crt~~~ - EXPIRED B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
+- 101-axway.nulogy.net-geotrust-sha256.crt -  B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
+ - `1.3.6.1.4.1.311.60.2.1.3=CA/1.3.6.1.4.1.311.60.2.1.2=Ontario, C=CA, ST=Ontario, L=Toronto/businessCategory=Private Organization/serialNumber=2018280, O=Nulogy Corporation, OU=Infrastructure, CN=axway.nulogy.net`
 
 ### 000-root-ca4.crt
 
@@ -136,7 +137,7 @@ The files contained in this repository are as follows.
 - This certificate has SubjectAlternativeNames (SANs) to ease future migrations.
 - We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
 
-### 100-axway.nulogy.net-geotrust-sha256.crt
+### 101-axway.nulogy.net-geotrust-sha256.crt
 
 - This certificate is signed by Geotrust EV, to comply with some customer's requests that our SSL certificates be validated against our legal name.
 
