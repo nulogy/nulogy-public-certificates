@@ -103,6 +103,7 @@ The files contained in this repository are as follows.
 - ~~~100-axway.nulogy.net-geotrust-sha256.crt~~~ - EXPIRED B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
 - 101-axway.nulogy.net-geotrust-sha256.crt -  B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
  - `1.3.6.1.4.1.311.60.2.1.3=CA/1.3.6.1.4.1.311.60.2.1.2=Ontario, C=CA, ST=Ontario, L=Toronto/businessCategory=Private Organization/serialNumber=2018280, O=Nulogy Corporation, OU=Infrastructure, CN=axway.nulogy.net`
+- 102-cpi-https.nulogy.net-geotrust-sha256.crt - Shim interchange certificate
 
 ### 000-root-ca4.crt
 
@@ -141,6 +142,9 @@ The files contained in this repository are as follows.
 
 - This certificate is signed by Geotrust EV, to comply with some customer's requests that our SSL certificates be validated against our legal name.
 
+### 102-cpi-https.nulogy.net-geotrust-sha256.crt - Shim interchange certificate
+
+- Signed by Geotrust/RapidSSL, for data interchange.
 
 ### Copyright
 
