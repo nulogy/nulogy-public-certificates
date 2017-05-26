@@ -146,6 +146,12 @@ The files contained in this repository are as follows.
 
 - Signed by Geotrust/RapidSSL, for data interchange.
 
+### 201-connect.nulogy.net.crt
+
+- Signed by Godaddy
+- Extended Validation
+- For use with b2bi 2.3
+
 ### Copyright
 
 The material in this repo is provided Copyright Nulogy Corporation 2016 - All Rights Reserved
