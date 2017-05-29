@@ -152,6 +152,12 @@ The files contained in this repository are as follows.
 - Extended Validation
 - For use with b2bi 2.3
 
+### 202-connect-na-qa.nulogy.net.crt
+
+- Signed by Godaddy
+- Extended Validation
+- For use with b2bi 2.3
+
 ### Copyright
 
 The material in this repo is provided Copyright Nulogy Corporation 2016 - All Rights Reserved
