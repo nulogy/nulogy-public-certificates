@@ -162,9 +162,10 @@ The files contained in this repository are as follows.
 
 - Signed by RapidSSL/Digicert
 - For use with b2bi 2.3
-- Chain:
- - Intermediate: RapidSSL RSA CA 2018 - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-01)
- - Root: DigiCert Global Root CA - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-02)
+
+Chain:
+- Intermediate: RapidSSL RSA CA 2018 - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-01)
+- Root: DigiCert Global Root CA - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-02)
 
 ### 204-connect.nulogy.net-i4-sha256.crt
 
