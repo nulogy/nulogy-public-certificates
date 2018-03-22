@@ -158,6 +158,24 @@ The files contained in this repository are as follows.
 - Extended Validation
 - For use with b2bi 2.3
 
+### 203-wildcard.nulogy.net.crt (new certificate)
+
+- Signed by RapidSSL/Digicert
+- For use with b2bi 2.3
+- Chain:
+ - Intermediate: RapidSSL RSA CA 2018 - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-01)
+ - Root: DigiCert Global Root CA - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-02)
+
+### 204-connect.nulogy.net-i4-sha256.crt
+
+- These are our connect.nulogy.net server side certificates for the production environment.
+- We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
+
+### 205-connect-na-qa.nulogy.net-i4-sha256.crt
+
+- These are our connect-na-qa.nulogy.net server side certificates for the QA/UAT environment.
+- We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
+
 ### Copyright
 
 The material in this repo is provided Copyright Nulogy Corporation 2016 - All Rights Reserved
