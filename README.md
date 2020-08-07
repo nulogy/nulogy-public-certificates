@@ -41,47 +41,9 @@ In the case of certificates with shorter expiry, you may wish to add a calendar 
 
 ## Validating the Root Certificate
 
-Validating the authenticity of our SSL certificates can be done via several means.
-
 It is your responsibility to validate the authenticity of the Nulogy Root certificate you trust. 
-
-It is safest to verify the key is valid over as many means as possible.
-
 Failing to do so may void your customer agreements and leave you vulnerable to Man in The Middle (MitM) attacks.
-
-
-### via HTTPS
-
-- You may fetch https://nulogy.com/nulogy-root-ca4.crt - which is served over HTTPS
-
-*** You must verify the HTTPS connection is authentic *** 
-
-- Validate the connection was signed and secured by our Nulogy.com certificate from RapidSSL. 
-- The corresponding `GeoTrust Primary Certification Authority` should be available in all modern operating systems.
-
-
-### via GPG
-
-- Obtain nulogy-root-ca4.crt and its signature from this repository or from http://ca4.nulogy.com
-- Verify the GPG signature `000-root-ca4.crt.signed.asc` from our Infrastructure Team Lead, `Ian Penney <ianp@nulogy.com>`, using GPG Key `B52FEE3604963DD2`.
-
-*** You must verify the GPG key is authentic *** 
-
-- Obtain the GPG key owned by `Ian Penney <ianp@nulogy.com>` from https://keybase.io/ian_nulogy 
-- The GPG key is registered at https://keybase.io/ and proofs are posted in the following locations:
-  - https://nulogy.com/keybase.txt confirms ianp@nulogy.com has control over the nulogy.com website.
-  - https://gist.github.com/nulogyian/44b8426e3584a3cc1ea1
-    - Proves the key owner is github user `nulogyian`. 
-    - Note that https://github.com/nulogyian is a member of https://github.com/nulogy. (Unfortunately, gists for organizations are not allowed.)
-  - https://keybase.io/ian_nulogy/sigchain#a420b04c3d429014a03b4d6cf62a19fc59ca63ebb1745b23ac6c3c370b1c76ca0f 
-    - A signature from GPG Key `B52FEE3604963DD2` has been published to DNS Text record, ianp.identity.nulogy.com, verifying that "Ian Penney <ianp@nulogy.com>" has control over the Nulogy.com domain. A proof has also been published at https://nulogy.com/keybase.txt
-- Nulogy frequently prints our GPG fingerprint IDs on our business cards.
-
-### via Phone
-
-- If you are having difficulty Validating the Nulogy Root certificate contact your Nulogy support representative. 
-- We may be able to help you validate the key's fingerprint over the phone, via Mail, or over another acceptable channel.
-
+Your Nulogy support representative will be able to help you validate the certificate key's fingerprint over the phone, via Mail, or another acceptable channel.
 
 ## Contents
 
