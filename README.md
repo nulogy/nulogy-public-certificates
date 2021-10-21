@@ -143,7 +143,7 @@ Chain:
 - For use with CNEDI and B2Bi
 - These are our *connect.nulogy.net* server side certificates for the production environment.
 
-### 207-connect.nulogy.net.crt _Not in use yet, will replace 206 on November 2nd 2021_ (expires September 21st 2022)
+### 207-connect.nulogy.net.crt [_Not in use yet, will replace 206 on November 2nd 2021_ ] (valid through September 21st 2022)
 
 - Signed by Digicert
 - For use with CNEDI and B2Bi
