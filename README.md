@@ -61,13 +61,10 @@ The files contained in this repository are as follows.
 - 004-axway.nulogy.net-i4-sha1.crt - B2Bi Production Certificate, with SHA-1 Signatures by I4
   - `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Integrations, CN=axway.nulogy.net`
 - 005-axway.nulogy.net-i4-sha256.crt - B2Bi Production Certificate, with SHA-256 Signatures by I4
-- `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Integrations, CN=axway.nulogy.net`
-- ```100-axway.nulogy.net-geotrust-sha256.crt~~~ - EXPIRED B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
-
-  ```
-
+  - `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Integrations, CN=axway.nulogy.net`
+- 100-axway.nulogy.net-geotrust-sha256.crt - **EXPIRED** B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
 - 101-axway.nulogy.net-geotrust-sha256.crt - B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
-- `1.3.6.1.4.1.311.60.2.1.3=CA/1.3.6.1.4.1.311.60.2.1.2=Ontario, C=CA, ST=Ontario, L=Toronto/businessCategory=Private Organization/serialNumber=2018280, O=Nulogy Corporation, OU=Infrastructure, CN=axway.nulogy.net`
+  - `1.3.6.1.4.1.311.60.2.1.3=CA/1.3.6.1.4.1.311.60.2.1.2=Ontario, C=CA, ST=Ontario, L=Toronto/businessCategory=Private Organization/serialNumber=2018280, O=Nulogy Corporation, OU=Infrastructure, CN=axway.nulogy.net`
 - 102-cpi-https.nulogy.net-geotrust-sha256.crt - Shim interchange certificate
 
 ### 000-root-ca4.crt
@@ -110,19 +107,19 @@ The files contained in this repository are as follows.
 
 - Signed by Geotrust/RapidSSL, for data interchange.
 
-### 201-connect.nulogy.net.crt
+### [Expired] 201-connect.nulogy.net.crt (Expired May 10 2018)
 
 - Signed by Godaddy
 - Extended Validation
 - For use with b2bi 2.3
 
-### 202-connect-na-qa.nulogy.net.crt
+### [Expired] 202-connect-na-qa.nulogy.net.crt (Expired May 10 2018)
 
 - Signed by Godaddy
 - Extended Validation
 - For use with b2bi 2.3
 
-### 203-wildcard.nulogy.net.crt (new certificate)
+### [Expired] 203-wildcard.nulogy.net.crt (Expired January 23rd 2021)
 
 - Signed by RapidSSL/Digicert
 - For use with b2bi 2.3
@@ -134,23 +131,23 @@ Chain:
 
 ### 204-connect.nulogy.net-i4-sha256.crt (valid through April 27th 2022)
 
-- These are our connect.nulogy.net server side certificates for the production environment.
-- We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
+- This is our AS2 signing/encryption certificate.
 
 ### 205-connect-na-qa.nulogy.net-i4-sha256.crt (valid through April 27th 2022)
 
-- These are our connect-na-qa.nulogy.net server side certificates for the QA/UAT environment.
-- We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
+- These are our *connect-na-qa.nulogy.net* server side certificates for the QA/UAT environment.
 
-### 206-connect.nulogy.net.crt (expires November 2nd 2021)
-
-- Signed by Digicert
-- For use with CNEDI and B2Bi
-
-### 207-connect.nulogy.net.crt _Not in use yet, will replace 206 on November 2nd_ (expires November 2st 2022)
+### 206-connect.nulogy.net.crt (valid through November 2nd 2021)
 
 - Signed by Digicert
 - For use with CNEDI and B2Bi
+- These are our *connect.nulogy.net* server side certificates for the production environment.
+
+### 207-connect.nulogy.net.crt _Not in use yet, will replace 206 on November 2nd 2021_ (expires September 21st 2022)
+
+- Signed by Digicert
+- For use with CNEDI and B2Bi
+- These are our *connect.nulogy.net* server side certificates for the production environment.
 
 ### Copyright
 
