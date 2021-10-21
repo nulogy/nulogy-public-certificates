@@ -1,5 +1,6 @@
 # Nulogy Public x509 Certificates
-> Updated August 2016
+
+> Updated October, 2021
 
 ## Introduction
 
@@ -13,13 +14,12 @@ NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](htt
 
 ## Choosing a Certificate to Use
 
-
 Which certificate you choose to install in your trust store is up to you, but you should prefer to install the highest certificate in the chain: the Nulogy Root CA4. This will significantly reduce the need for future configuration changes.
 
 If your client software does not support trusted roots with provided intermediates, you may opt to install 001-issuing-ca-i4.crt.
 The likelihood that we will have to revoke 001-issuing-ca-i4 and issue a replacement is low.
 
-If your client software, or your internal processes do not allow you to use trusted Root certificates such as our CA4 or I4, you may wish to trust one of our server-side certificates directly. 
+If your client software, or your internal processes do not allow you to use trusted Root certificates such as our CA4 or I4, you may wish to trust one of our server-side certificates directly.
 
 If you choose to do so, note: the likelihood that we will have to revoke and reissue this certificate within the coming years is very high. If this occurs, and you do not include I4 or CA4 in your trust store, your applications will fail to communicate with our servers. We will give as much notice as possible for this, but for security reasons we may be forced to revoke this certificate immediately, without notice.
 
@@ -29,7 +29,7 @@ Please check the expiry date on the certificate you install. To do so, you may w
 
 ```
 $ openssl x509 -text -noout -in 000-root-ca4.crt
- ... 
+ ...
         Validity
             Not Before: Oct  7 10:48:37 2015 GMT
             Not After : Oct  6 10:48:37 2025 GMT
@@ -41,7 +41,7 @@ In the case of certificates with shorter expiry, you may wish to add a calendar 
 
 ## Validating the Root Certificate
 
-It is your responsibility to validate the authenticity of the Nulogy Root certificate you trust. 
+It is your responsibility to validate the authenticity of the Nulogy Root certificate you trust.
 Failing to do so may void your customer agreements and leave you vulnerable to Man in The Middle (MitM) attacks.
 Your Nulogy support representative will be able to help you validate the certificate key's fingerprint over the phone, via Mail, or another acceptable channel.
 
@@ -61,10 +61,13 @@ The files contained in this repository are as follows.
 - 004-axway.nulogy.net-i4-sha1.crt - B2Bi Production Certificate, with SHA-1 Signatures by I4
   - `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Integrations, CN=axway.nulogy.net`
 - 005-axway.nulogy.net-i4-sha256.crt - B2Bi Production Certificate, with SHA-256 Signatures by I4
- - `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Integrations, CN=axway.nulogy.net`
-- ~~~100-axway.nulogy.net-geotrust-sha256.crt~~~ - EXPIRED B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
-- 101-axway.nulogy.net-geotrust-sha256.crt -  B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
- - `1.3.6.1.4.1.311.60.2.1.3=CA/1.3.6.1.4.1.311.60.2.1.2=Ontario, C=CA, ST=Ontario, L=Toronto/businessCategory=Private Organization/serialNumber=2018280, O=Nulogy Corporation, OU=Infrastructure, CN=axway.nulogy.net`
+- `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Integrations, CN=axway.nulogy.net`
+- ```100-axway.nulogy.net-geotrust-sha256.crt~~~ - EXPIRED B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
+
+  ```
+
+- 101-axway.nulogy.net-geotrust-sha256.crt - B2Bi Production Environment Certificate, with SHA-256 Signatures by Geotrust
+- `1.3.6.1.4.1.311.60.2.1.3=CA/1.3.6.1.4.1.311.60.2.1.2=Ontario, C=CA, ST=Ontario, L=Toronto/businessCategory=Private Organization/serialNumber=2018280, O=Nulogy Corporation, OU=Infrastructure, CN=axway.nulogy.net`
 - 102-cpi-https.nulogy.net-geotrust-sha256.crt - Shim interchange certificate
 
 ### 000-root-ca4.crt
@@ -73,10 +76,9 @@ The files contained in this repository are as follows.
 - Extensive effort has been dedicated to utilising the very best practices for operating an Offline x509 Certificate Authority Root.
 - The likelihood of this certificate being revoked or replaced before expiry is low.
 
-
 ### 000-root-ca4.crt.signed.asc
 
-- This is a signed copy of 000-root-ca4.crt. 
+- This is a signed copy of 000-root-ca4.crt.
   - Verify with 0xB52FEE3604963DD2 - for which proofs of ownership have been published.
 
 ### 001-issuing-ca-i4.crt
@@ -126,10 +128,11 @@ The files contained in this repository are as follows.
 - For use with b2bi 2.3
 
 Chain:
+
 - Intermediate: RapidSSL RSA CA 2018 - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-01)
 - Root: DigiCert Global Root CA - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-02)
 
-### 204-connect.nulogy.net-i4-sha256.crt (expired)
+### 204-connect.nulogy.net-i4-sha256.crt (valid through April 27th 2022)
 
 - These are our connect.nulogy.net server side certificates for the production environment.
 - We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
@@ -139,10 +142,15 @@ Chain:
 - These are our connect-na-qa.nulogy.net server side certificates for the QA/UAT environment.
 - We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
 
-### 207-connect.nulogy.net.crt (valid through Sept 21st 2022)
+### 206-connect.nulogy.net.crt (expires November 2nd 2021)
 
-- These are our connect.nulogy.net server side certificates for the production environment.
-- We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
+- Signed by Digicert
+- For use with CNEDI and B2Bi
+
+### 207-connect.nulogy.net.crt _Not in use yet, will replace 206 on November 2nd_ (expires November 2st 2022)
+
+- Signed by Digicert
+- For use with CNEDI and B2Bi
 
 ### Copyright
 
