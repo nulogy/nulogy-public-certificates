@@ -138,10 +138,12 @@ Chain:
 ### 204-connect.nulogy.net-i4-sha256.crt (valid through April 27th 2022)
 
 - This is our AS2 signing/encryption certificate.
+- Used for inbound on CNEDI production and outbound on B2Bi Production
 
 ### 205-connect-na-qa.nulogy.net-i4-sha256.crt (valid through April 27th 2022)
 
 - These are our *connect-na-qa.nulogy.net* server side certificates for the QA/UAT environment.
+- Used for inbound and outbound on B2Bi UAT
 
 
 ### 207-connect.nulogy.net.crt (valid through September 21st 2022)
