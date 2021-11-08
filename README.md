@@ -129,6 +129,12 @@ Chain:
 - Intermediate: RapidSSL RSA CA 2018 - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-01)
 - Root: DigiCert Global Root CA - (https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&actp=CROSSLINK&id=AR1548#lightbox-02)
 
+### [Expired] 206-connect.nulogy.net.crt (Expired November 2nd 2021)
+
+- Signed by Digicert
+- For use with CNEDI and B2Bi
+- These are our *connect.nulogy.net* server side certificates for the production environment.
+
 ### 204-connect.nulogy.net-i4-sha256.crt (valid through April 27th 2022)
 
 - This is our AS2 signing/encryption certificate.
@@ -137,13 +143,8 @@ Chain:
 
 - These are our *connect-na-qa.nulogy.net* server side certificates for the QA/UAT environment.
 
-### 206-connect.nulogy.net.crt (valid through November 2nd 2021)
 
-- Signed by Digicert
-- For use with CNEDI and B2Bi
-- These are our *connect.nulogy.net* server side certificates for the production environment.
-
-### 207-connect.nulogy.net.crt [_Not in use yet, will replace 206 on November 2nd 2021_ ] (valid through September 21st 2022)
+### 207-connect.nulogy.net.crt (valid through September 21st 2022)
 
 - Signed by Digicert
 - For use with CNEDI and B2Bi
