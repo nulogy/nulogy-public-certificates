@@ -14,7 +14,7 @@ NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](htt
 
 ## Choosing a Certificate to Use
 
-Which certificate you choose to install in your trust store is up to you, but you should prefer to install the highest certificate in the chain: the Nulogy Root CA4. This will significantly reduce the need for future configuration changes.
+Which certificate you choose to install in your trust store is up to you, but you should prefer to install the highest certificate in the chain: the Nulogy Root CA4 / DigiCert Global Root CA. This will significantly reduce the need for future configuration changes.
 
 If your client software does not support trusted roots with provided intermediates, you may opt to install 001-issuing-ca-i4.crt (the intermediate certificate).
 The likelihood that we will have to revoke 001-issuing-ca-i4 and issue a replacement is low.
@@ -41,7 +41,7 @@ In the case of certificates with shorter expiry, you may wish to add a calendar 
 
 ## Validating the Root Certificate
 
-It is your responsibility to validate the authenticity of the Nulogy Root certificate you trust.
+It is your responsibility to validate the authenticity of the Root certificate you trust.
 Failing to do so may void your customer agreements and leave you vulnerable to Man in The Middle (MitM) attacks.
 Your Nulogy support representative will be able to help you validate the certificate key's fingerprint over the phone, via Mail, or another acceptable channel.
 
@@ -76,6 +76,7 @@ The files contained in this repository are as follows.
 - Extensive effort has been dedicated to utilising the very best practices for operating a private x509 Certificate Authority Root.
 - The likelihood of this certificate being revoked or replaced in the near term is very low.
 
+
 #### 207-connect.nulogy.net.crt - TLS Certificate Production
 
 - `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
@@ -105,6 +106,14 @@ The files contained in this repository are as follows.
 
 - This is our AS2 signing/encryption certificate.
 - For use with CNEDI and B2Bi Production
+
+#### 210-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
+
+- `CN=connect-na-qa.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
+- Expires March 2032
+
+- This is our AS2 signing/encryption certificate.
+- For use with CNEDI and B2Bi UAT
 
 
 ### Copyright
