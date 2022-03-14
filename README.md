@@ -76,25 +76,36 @@ The files contained in this repository are as follows.
 - Extensive effort has been dedicated to utilising the very best practices for operating a private x509 Certificate Authority Root.
 - The likelihood of this certificate being revoked or replaced in the near term is very low.
 
-#### 207-connect.nulogy.net.crt - Signed by Digicert
+#### 207-connect.nulogy.net.crt - TLS Certificate Production
 
 - `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
 - Contents include:
     - Certificate (connect.nulogy.net): Expiration **September 2022**
     - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expiration April 2031
     - Root Certificate (DigiCert Global Root CA): Expiration November 2031
+- Signed by Digicert
 - These are our *connect.nulogy.net* server side certificates for the Production environment.
-- For use with CNEDI and B2Bi
+- For use with CNEDI and B2Bi Production
 
-#### 208-connect-na-qa.nulogy.net.crt - Signed by Digicert
+#### 208-connect-na-qa.nulogy.net.crt - TLS Certificate UAT
 
 - `CN=connect-na-qa.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
 - Contents include:
     - Certificate (connect-na-qa.nulogy.net): Expiration **February 2023**
     - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expiration April 2031
-    - Root Certificate (DigiCert Global Root CA): Expiration November 2031
+    - Root Certificate (DigiCert Global Root CA): Expiration November 2031  
+- Signed by Digicert
 - These are our *connect-na-qa.nulogy.net* server side certificates for the UAT environment.
-- For use with CNEDI and B2Bi
+- For use with CNEDI and B2Bi UAT
+
+#### 209-connect.nulogy.net.crt - AS2 signing/encryption Production
+
+- `CN=connect.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
+- Expires March 2032
+
+- This is our AS2 signing/encryption certificate.
+- For use with CNEDI and B2Bi Production
+
 
 ### Copyright
 
