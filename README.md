@@ -76,26 +76,6 @@ The files contained in this repository are as follows.
 - Extensive effort has been dedicated to utilising the very best practices for operating a private x509 Certificate Authority Root.
 - The likelihood of this certificate being revoked or replaced in the near term is very low.
 
-
-#### 204-connect.nulogy.net-i4-sha256.crt - Production SHA-256 Signatures by I4
-
-- `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=Nulogy Internal Issuing CA I4,OU=Infrastructure,O=Nulogy Corporation,C=CA` 
-- Expires April 27th 2022
-
-- This is our AS2 signing/encryption certificate.
-- Used for inbound on CNEDI production and outbound on B2Bi Production
-- We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
-
-#### 205-connect-na-qa.nulogy.net-i4-sha256.crt - Test SHA-256 Signatures by I4
-
-- `CN=connect-na-qa.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA,CN=Nulogy Internal Issuing CA I4,OU=Infrastructure,O=Nulogy Corporation,C=CA`
-- Expires April 27th 2022
-
-- These are our *connect-na-qa.nulogy.net* server side certificates for the QA/UAT environment.
-- Used for inbound and outbound on B2Bi UAT
-- We may be forced to revoke and re-issue these certificates in future due to configuration changes or security requirements.
-
-
 #### 207-connect.nulogy.net.crt - Signed by Digicert
 
 - `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
@@ -108,6 +88,6 @@ The files contained in this repository are as follows.
 
 ### Copyright
 
-The material in this repo is provided Copyright Nulogy Corporation 2016 - All Rights Reserved
+The material in this repo is provided Copyright Nulogy Corporation 2022 - All Rights Reserved
 
 Nulogy customers in good standing are licensed to use these x509 certificates only for connecting to Nulogy Corporation assets as prescribed by our standard operating procedures and by support instructions.
