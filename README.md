@@ -137,6 +137,30 @@ The files contained in this repository are as follows.
 - Let your Integration Consultant know that you are using this certificate.
 - For use with CNEDI and B2Bi UAT
 
+
+#### 302-connect.nulogy.net.crt - AS2 signing/encryption Production
+
+- `CN=connect.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
+- Expires April 2027
+
+- This is our V3 5 year AS2 signing/encryption certificate.
+- Only use this if your AS2 messaging does not support longer than 5 years.
+- Let your Integration Consultant know that you are using this certificate.
+- For use with CNEDI and B2Bi Production
+
+
+#### 301-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
+
+- `CN=connect-na-qa.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
+- Expires April 2027
+
+- This is our V3 AS2 signing/encryption certificate.
+- Only use this if your AS2 messaging does not support longer than 5 years.
+- Let your Integration Consultant know that you are using this certificate.
+- For use with CNEDI and B2Bi UAT
+
+
+
 ### Copyright
 
 The material in this repo is provided Copyright Nulogy Corporation 2022 - All Rights Reserved
