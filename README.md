@@ -88,6 +88,7 @@ The files contained in this repository are as follows.
 - These are our *connect.nulogy.net* server side certificates for the Production environment.
 - For use with CNEDI and B2Bi Production
 
+
 #### 208-connect-na-qa.nulogy.net.crt - TLS Certificate UAT
 
 - `CN=connect-na-qa.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
@@ -99,15 +100,8 @@ The files contained in this repository are as follows.
 - These are our *connect-na-qa.nulogy.net* server side certificates for the UAT environment.
 - For use with CNEDI and B2Bi UAT
 
-#### 209-connect.nulogy.net.crt - AS2 signing/encryption Production [Preferred]
 
-- `CN=connect.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
-- Expires March 2032
-
-- This is our AS2 signing/encryption certificate.
-- For use with CNEDI and B2Bi Production
-
-#### 210-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT [Preferred]
+#### 210-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
 
 - `CN=connect-na-qa.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
 - Expires March 2032
@@ -116,24 +110,12 @@ The files contained in this repository are as follows.
 - For use with CNEDI and B2Bi UAT
 
 
-#### 211-connect.nulogy.net.crt - AS2 signing/encryption Production
-
-- `CN=connect.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
-- Expires April 2027
-
-- This is our 5 year AS2 signing/encryption certificate.
-- Only use this if your AS2 messaging does not support longer than 5 years.
-- Let your Integration Consultant know that you are using this certificate.
-- For use with CNEDI and B2Bi Production
-
-
-#### 212-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
+#### 301-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
 
 - `CN=connect-na-qa.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
 - Expires April 2027
 
-- This is our AS2 signing/encryption certificate.
-- Only use this if your AS2 messaging does not support longer than 5 years.
+- This is our x.509 V3 5 year AS2 signing/encryption certificate.
 - Let your Integration Consultant know that you are using this certificate.
 - For use with CNEDI and B2Bi UAT
 
@@ -143,21 +125,9 @@ The files contained in this repository are as follows.
 - `CN=connect.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
 - Expires April 2027
 
-- This is our V3 5 year AS2 signing/encryption certificate.
-- Only use this if your AS2 messaging does not support longer than 5 years.
+- This is our x.509 V3 5 year AS2 signing/encryption certificate.
 - Let your Integration Consultant know that you are using this certificate.
 - For use with CNEDI and B2Bi Production
-
-
-#### 301-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
-
-- `CN=connect-na-qa.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
-- Expires April 2027
-
-- This is our V3 AS2 signing/encryption certificate.
-- Only use this if your AS2 messaging does not support longer than 5 years.
-- Let your Integration Consultant know that you are using this certificate.
-- For use with CNEDI and B2Bi UAT
 
 
 

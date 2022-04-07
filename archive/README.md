@@ -86,6 +86,15 @@ The files contained in this repository are as follows.
 - Contains the Digicert Global Root cert as well
 - These are our *connect.nulogy.net* server side certificates for the Production environment.
 
+#### 209-connect.nulogy.net.crt - AS2 signing/encryption Production
+
+- This cert is active, but should not be used as it is not x.509 V3.
+- `CN=connect.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
+- Expires March 2032
+
+- This is our AS2 signing/encryption certificate.
+- For use with CNEDI and B2Bi Production
+
 
 ### Copyright
 
