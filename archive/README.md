@@ -71,7 +71,7 @@ The files contained in this repository are as follows.
 #### 205-connect-na-qa.nulogy.net-i4-sha256.crt - Test SHA-256 Signatures by I4
 
 - `CN=connect-na-qa.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA,CN=Nulogy Internal Issuing CA I4,OU=Infrastructure,O=Nulogy Corporation,C=CA`
-- Expires April 27th 2022
+- Expired April 27th 2022
 
 - These are our *connect-na-qa.nulogy.net* server side certificates for the QA/UAT environment.
 - Used for inbound and outbound on B2Bi UAT
@@ -85,6 +85,19 @@ The files contained in this repository are as follows.
 - For use with CNEDI and B2Bi
 - Contains the Digicert Global Root cert as well
 - These are our *connect.nulogy.net* server side certificates for the Production environment.
+
+#### 207-connect.nulogy.net.crt - TLS Certificate Production
+
+- `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
+- Expired September 21st 2022
+- Contents include:
+    - Certificate (connect.nulogy.net)
+    - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expiration April 2031
+    - Root Certificate (DigiCert Global Root CA): Expiration November 2031
+- Signed by Digicert
+- These are our *connect.nulogy.net* server side certificates for the Production environment.
+- For use with CNEDI and B2Bi Production
+
 
 #### 209-connect.nulogy.net.crt - AS2 signing/encryption Production
 
