@@ -98,15 +98,6 @@ The files contained in this repository are as follows.
 - These are our *connect.nulogy.net* server side certificates for the Production environment.
 - For use with CNEDI and B2Bi Production
 
-#### 210-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
-
-- `CN=connect-na-qa.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
-- Expires March 2032
-
-- No longer default starting September 14th 2022
-- This is our AS2 signing/encryption certificate.
-- For use with CNEDI and B2Bi UAT
-
 
 #### 301-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
 
