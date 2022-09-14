@@ -105,9 +105,17 @@ The files contained in this repository are as follows.
 - `CN=connect.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
 - Expires March 2032
 
-- This is our AS2 signing/encryption certificate.
+- This was temporarily our AS2 signing/encryption certificate.
 - For use with CNEDI and B2Bi Production
 
+#### 210-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
+
+- This cert is active, but should not be used as it is not x.509 V3.
+- `CN=connect-na-qa.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
+- Expires March 2032
+
+- This was temporarily our AS2 signing/encryption certificate.
+- For use with CNEDI and B2Bi UAT
 
 ### Copyright
 
