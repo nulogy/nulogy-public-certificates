@@ -5,7 +5,9 @@
 ## Introduction
 
 Nulogy has developed a set of self-signed x509 certificates in a hierarchy of trust with an airgapped root authority and secure intermediate.
+
 When deployed properly by administrators, these assets can reduce operational and security risks as well as administrator costs.
+
 These certificates allow Secure FTP, AS2 and HTTPS communications with Nulogy's environment to be encrypted and authenticated.
 
 NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](https://sites.google.com/site/itstheshappening/) Do not use the provided SHA-1 certificates if your systems support the superior SHA-256. Nulogy Corporation is not responsible for security risks resulting from your choice to use our SHA-1 certificates. SHA-1 certificates are provided to facilitate your migration to secure services before SHA-1 is sunset permanently.
@@ -35,7 +37,7 @@ NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](htt
            USE: 302-connect.nulogy.net.crt
 
 
-NOTE Regarding TLS:
+**NOTE Regarding TLS:**
 
 Which certificate you choose to install in your trust store is up to you, but you should prefer to install the highest certificate in the chain: the DigiCert Global Root CA. This will significantly reduce the need for future configuration changes.
 
