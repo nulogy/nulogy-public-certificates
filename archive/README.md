@@ -7,6 +7,34 @@ certificates that are no longer in rotation, as well as descriptions about their
 
 The files contained in this repository are as follows.
 
+#### 000-root-ca4.crt - The Nulogy Root CA4 Certificate
+
+- `C=CA, ST=Ontario, L=Toronto, O=Nulogy Corporation, OU=Infrastructure, CN=Nulogy Root CA 4`
+- Expires October 2025
+
+- This is the current Nulogy Root CA Certificate.
+- Extensive effort has been dedicated to utilising the very best practices for operating an Offline x509 Certificate Authority Root.
+- The likelihood of this certificate being revoked or replaced before expiry is low.
+
+#### 000-root-ca4.crt.signed.asc - A GPG Signature of 000-root-ca4.crt
+
+- This is a signed copy of 000-root-ca4.crt.
+  - Verify with 0xB52FEE3604963DD2 - for which proofs of ownership have been published.
+
+#### 001-issuing-ca-i4.crt - The Nulogy Intermediate I4 Certificate
+
+- `C=CA, O=Nulogy Corporation, OU=Infrastructure, CN=Nulogy Internal Issuing CA I4`
+- Expires October 2025
+
+- This is the current Nulogy Intermediate Certificate, used for day-to-day signings.
+- In most cases we will combine this certificate with a server certificate and transmit it at the time a session is initiated.
+  - Not all software supports this. In which case, you may elect to simply trust the I4 certificate as a trusted root, instead.
+- The private key is stored securely and accessible only to a small number of vetted Infrastructure administrators.
+- Extensive effort has been dedicated to utilising the very best practices for operating a private x509 Certificate Authority Root.
+- The likelihood of this certificate being revoked or replaced in the near term is very low.
+
+
+
 
 #### 002-axway-test.nulogy.net-i4-sha1.crt / 003-axway-test.nulogy.net-i4-sha256.crt - B2Bi Test Certificate, with SHA-1 or SHA-256 Signatures by I4
 
