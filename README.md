@@ -14,7 +14,7 @@ NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](htt
 
 ## Choosing a Certificate to Use
 
-*IF* your connection is TLS (via HTTPS):
+**IF** your connection is TLS (via HTTPS):
 
        *IF* your connection is UAT:
        
