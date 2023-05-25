@@ -79,6 +79,7 @@ The files contained in this repository are as follows.
 #### 220-connect.nulogy.net.crt - TLS Certificate Production
 
 - `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
+- Serial Number: 19733834873932870291682653328813255742 (0xed8992d796017602f6272079712ec3e)
 - Contents include:
   - Certificate (connect.nulogy.net): Expiration **September 2023**
   - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expiration April 2031
@@ -91,6 +92,7 @@ The files contained in this repository are as follows.
 #### 221-connect-na-qa.nulogy.net.crt - TLS Certificate UAT
 
 - `CN=connect-na-qa.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
+- Serial Number: 5071367148915287984348724456423100702 (0x3d0b5b47a110ca7b21b04dff657111e)
 - Contents include:
   - Certificate (connect-na-qa.nulogy.net): Expiration **February 2024**
   - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expiration April 2031
@@ -102,6 +104,7 @@ The files contained in this repository are as follows.
 #### 301-connect-na-qa.nulogy.net.crt - AS2 signing/encryption UAT
 
 - `CN=connect-na-qa.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
+- Serial Number: 17705727081225065378 (0xf5b760f8ae6f13a2)
 - Expires April 2027
 
 - This is our x.509 V3 5 year AS2 signing/encryption certificate.
@@ -111,6 +114,7 @@ The files contained in this repository are as follows.
 #### 302-connect.nulogy.net.crt - AS2 signing/encryption Production
 
 - `CN=connect.nulogy.net,OU=Integrations,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA`
+- Serial Number: 13992631575093187943 (0xc22fd0480a581567)
 - Expires April 2027
 
 - This is our x.509 V3 5 year AS2 signing/encryption certificate.
