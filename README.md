@@ -13,21 +13,27 @@ NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](htt
 ## Choosing a Certificate to Use
 
 **IF** your connection is TLS (via HTTPS):
+
        **IF** your connection is **UAT**:
-           USE Either: DigiCert Root CA
+       
+           USE Either: DigicertGlobalRootCA.crt.pem 
                OR: DigiCert Intermediate CA
                OR: 221-connect-na-qa.nulogy.net.crt
            
        **IF** your connection is **PRODUCTION**:
-           USE Either: DigiCert Root CA
+       
+           USE Either: DigicertGlobalRootCA.crt.pem
                OR: DigiCert Intermediate CA 
                OR: 220-connect.nulogy.net.crt
 
 **IF** your connection is AS2 (via HTTP):
+
        **IF** your connection is **UAT**:
+       
            USE: 301-connect-na-qa.nulogy.net.crt
 
        **IF** your connection is **PRODUCTION**:
+       
            USE: 302-connect.nulogy.net.crt
 
 
