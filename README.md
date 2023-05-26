@@ -4,37 +4,34 @@
 
 ## Introduction
 
-Nulogy has developed a set of self-signed x509 certificates in a hierarchy of trust with an airgapped root authority and secure intermediate.
+Nulogy has a set of self-signed x509 certificates for AS2 and a set of Digicert x509 certificates for TLS. 
 
 When deployed properly by administrators, these assets can reduce operational and security risks as well as administrator costs.
 
 These certificates allow Secure FTP, AS2 and HTTPS communications with Nulogy's environment to be encrypted and authenticated.
 
-NOTE: [Freestart collisions have been found for the SHA-1 hashing function.](https://sites.google.com/site/itstheshappening/) Do not use the provided SHA-1 certificates if your systems support the superior SHA-256. Nulogy Corporation is not responsible for security risks resulting from your choice to use our SHA-1 certificates. SHA-1 certificates are provided to facilitate your migration to secure services before SHA-1 is sunset permanently.
-
 ## Choosing a Certificate to Use
 
-**IF** your connection is TLS (via HTTPS):
+### *If* your connection is TLS (via HTTPS):
+#### *If* your connection is PRODUCTION:
+Use:   
+- Either: DigicertGlobalRootCA.crt.pem 
+- OR: DigiCert Intermediate CA
+- OR: 220-connect.nulogy.net.crt
 
-       *IF* your connection is UAT:
-       
-           USE Either: DigicertGlobalRootCA.crt.pem 
-               OR: DigiCert Intermediate CA
-               OR: 221-connect-na-qa.nulogy.net.crt
-           
-       *IF* your connection is PRODUCTION:
-       
-           USE Either: DigicertGlobalRootCA.crt.pem
-               OR: DigiCert Intermediate CA 
-               OR: 220-connect.nulogy.net.crt
+#### *If* your connection is UAT:
+Use: 
+- Either: DigicertGlobalRootCA.crt.pem 
+- OR: DigiCert Intermediate CA
+- OR: 221-connect-na-qa.nulogy.net.crt           
 
-**IF** your connection is AS2 (via HTTP):
+### *If* your connection is AS2 (via HTTP):
 
-       *IF* your connection is UAT:
-           USE: 301-connect-na-qa.nulogy.net.crt
+#### *IF* your connection is UAT:
+Use: 301-connect-na-qa.nulogy.net.crt
 
-       *IF* your connection is PRODUCTION:
-           USE: 302-connect.nulogy.net.crt
+#### *IF* your connection is PRODUCTION:
+Use: 302-connect.nulogy.net.crt
 
 
 **NOTE Regarding TLS:**
@@ -50,7 +47,7 @@ If you choose to do so, note: the likelihood that we will have to revoke and rei
 
 ## Scheduled Expiry Dates
 
-Please check the expiry date on the certificate you install. To do so, you may wish to use the OpenSSL utility included with most Unix-like operating systems:
+Please check the expiry date on the certificate you install. The expiry dates are noted below. You can also use the OpenSSL utility included with most Unix-like operating systems:
 
 ```
 $ openssl x509 -text -noout -in 000-root-ca4.crt
@@ -74,14 +71,21 @@ Your Nulogy support representative will be able to help you validate the certifi
 
 The files contained in this repository are as follows.
 
+
+#### DigicertGlobalRootCA.crt.pem - TLS Digicert Root CA Certificate 
+- Mirror of [DigiCert Global Root CA](https://www.digicert.com/kb/digicert-root-certificates.htm#:~:text=08%3A3B%3AE0%3A56%3A90%3A42%3A46%3AB1%3AA1%3A75%3A6A%3AC9%3A59%3A91%3AC7%3A4A), hosted here for convenience
+- Serial Number: 10944719598952040374951832963794454346 (0x83be056904246b1a1756ac95991c74a)
+- Expires November 2031
+- For use with HTTPS/TLS connectivity to CNEDI and B2BI, Production and UAT
+
 #### 220-connect.nulogy.net.crt - TLS Certificate Production
 
 - `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
 - Serial Number: 19733834873932870291682653328813255742 (0xed8992d796017602f6272079712ec3e)
 - Contents include:
-  - Certificate (connect.nulogy.net): Expiration **September 2023**
-  - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expiration April 2031
-  - Root Certificate (DigiCert Global Root CA): Expiration November 2031
+  - Certificate (connect.nulogy.net): Expires **September 2023**
+  - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expires April 2031
+  - Root Certificate (DigiCert Global Root CA): Expires November 2031
 - Signed by Digicert
 - These are our *connect.nulogy.net* server side certificates for the Production environment.
 - For use with CNEDI and B2Bi Production
@@ -92,9 +96,9 @@ The files contained in this repository are as follows.
 - `CN=connect-na-qa.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA, CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`
 - Serial Number: 5071367148915287984348724456423100702 (0x3d0b5b47a110ca7b21b04dff657111e)
 - Contents include:
-  - Certificate (connect-na-qa.nulogy.net): Expiration **February 2024**
-  - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expiration April 2031
-  - Root Certificate (DigiCert Global Root CA): Expiration November 2031
+  - Certificate (connect-na-qa.nulogy.net): Expires **February 2024**
+  - Intermediate Certificate (DigiCert TLS RSA SHA256 2020 CA1): Expires April 2031
+  - Root Certificate (DigiCert Global Root CA): Expires November 2031
 - Signed by Digicert
 - These are our *connect-na-qa.nulogy.net* server side certificates for the UAT environment.
 - For use with CNEDI and B2Bi UAT
@@ -117,7 +121,6 @@ The files contained in this repository are as follows.
 
 - This is our x.509 V3 5 year AS2 signing/encryption certificate.
 - For use with CNEDI and B2Bi Production
-
 
 
 ### Copyright
