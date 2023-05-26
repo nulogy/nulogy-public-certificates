@@ -121,4 +121,5 @@ Your Nulogy support representative will be able to help you validate the certifi
 The material in this repo is provided Copyright Nulogy Corporation 2022 - All Rights Reserved
 
 Nulogy customers in good standing are licensed to use these x509 certificates only for connecting to Nulogy Corporation assets as prescribed by our standard operating procedures and by support instructions.
+
 Digicert Root certificates are a property of Digicert.
