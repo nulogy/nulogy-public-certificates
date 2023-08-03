@@ -1,6 +1,6 @@
 # Nulogy Public x509 Certificates
 
-> Updated May, 2023
+> Updated Aug, 2023
 
 ## Introduction
 
