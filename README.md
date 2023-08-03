@@ -29,27 +29,23 @@ If you are connecting over HTTPS with SSL/TLS, you have the following options fo
 | Intermediate Certificate *(Alternative Option)* | DigiCert Intermediate G2 CA  | DigiCert Intermediate CA  |
 | Yearly Server Certificate *(Alternative Option)* | [222-connect.nulogy.net.crt](222-connect.nulogy.net.pem) | [221-connect-na-qa.nulogy.net.crt](221-connect-na-qa.nulogy.net.crt)|
 
-Note: The Digicert Root CA has been replaced by the Digicert Root G2 for all certificates created after March 2023.
+Note: 
 
 ---
-> #### Note about TLS Certificate Options
+> #### Notes about TLS Certificate Options
 >
+> Notice: The Digicert Root CA has been replaced by the Digicert Root G2 for all certificates created after March 2023.
+> 
 > Which TLS certificate you choose to install in your trust store is up to you, however should prefer to install
-> 
 > the highest certificate in the chain: the [DigiCert Global Root G2](#digicertglobalrootcacrtpem---tls-digicert-root-ca-certificate) certificate,
-> 
 > this will significantly reduce the need for future configuration changes.
 >
 > If your client software does not support trusted roots with provided intermediates, you may opt to install the DigiCert Intermediate G2 CA certificate.
-> 
 > The likelihood that we will have to change the intermediate cert and use a replacement is low.
 >
 > If your client software or your internal processes do not allow you to use trusted Root certificates, you can use the yearly server certificates.
-> 
->  If you choose to do so, note that we will have to reissue this certificate yearly.
-> 
+> If you choose to do so, note that we will have to reissue this certificate yearly.
 > When this occurs, if you do not include the intermediate or root certificates in your trust store, your applications will fail to communicate with our servers.
-> 
 > We will give as much notice as possible for the yearly certificate reissue, but for security reasons we may be forced to revoke this certificate immediately, without notice.
 > 
 
