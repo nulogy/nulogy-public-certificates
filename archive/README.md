@@ -156,6 +156,21 @@ The files contained in this repository are as follows.
 - This was temporarily our AS2 signing/encryption certificate.
 - For use with CNEDI and B2Bi UAT
 
+#### [220-connect.nulogy.net.crt](220-connect.nulogy.net.pem) - TLS Certificate for Production Environment
+
+- Subject: `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA` (Issuer: `CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`)
+- Serial Number: 19733834873932870291682653328813255742 (`0xed8992d796017602f6272079712ec3e`)
+- Expires **September 2023**
+- Contents include:
+  - Certificate (connect.nulogy.net)
+  - Intermediate CA Certificate (DigiCert TLS RSA SHA256 2020 CA1)
+  - Root CA Certificate ([DigiCert Global Root CA](#digicertglobalrootcacrtpem---tls-digicert-root-ca-certificate))
+- Signed by Digicert
+- This is the `connect.nulogy.net` server side certificate for our Production environment
+- For use with CNEDI and B2Bi Production
+- Note about the file name: .crt and .pem file extenstions are used interchangebly
+
+
 ### Copyright
 
 The material in this repo is provided Copyright Nulogy Corporation 2022 - All Rights Reserved
