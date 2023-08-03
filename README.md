@@ -37,7 +37,7 @@ Note:
 > Notice: The Digicert Root CA has been replaced by the Digicert Root G2 for all certificates created after March 2023.
 > 
 > Which TLS certificate you choose to install in your trust store is up to you, however should prefer to install
-> the highest certificate in the chain: the [DigiCert Global Root G2](#digicertglobalrootcacrtpem---tls-digicert-root-ca-certificate) certificate,
+> the highest certificate in the chain: the [DigiCert Global Root G2](#digicertglobalrootg2crtpem---tls-digicert-root-g2-certificate) certificate,
 > this will significantly reduce the need for future configuration changes.
 >
 > If your client software does not support trusted roots with provided intermediates, you may opt to install the DigiCert Intermediate G2 CA certificate.
