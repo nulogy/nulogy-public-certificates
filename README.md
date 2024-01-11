@@ -25,9 +25,9 @@ If you are connecting over HTTP with AS2, you have the following options for Pro
 If you are connecting over HTTPS with SSL/TLS, you have the following options for Production and UAT environments.
 | Options  | Production  | UAT |
 | - | ------------- | ------------- |
-| Root Certificate *(Preferred Option)*| [DigiCertGlobalRootG2.crt.pem](DigiCertGlobalRootG2.crt.pem) | [DigicertGlobalRootCA.crt.pem](DigicertGlobalRootCA.crt.pem)   |
-| Intermediate Certificate *(Alternative Option)* | DigiCert Intermediate G2 CA  | DigiCert Intermediate CA  |
-| Yearly Server Certificate *(Alternative Option)* | [222-connect.nulogy.net.crt](222-connect.nulogy.net.pem) | [221-connect-na-qa.nulogy.net.crt](221-connect-na-qa.nulogy.net.crt)|
+| Root Certificate *(Preferred Option)*| [DigiCertGlobalRootG2.crt.pem](DigiCertGlobalRootG2.crt.pem) | [[DigiCertGlobalRootG2.crt.pem](DigiCertGlobalRootG2.crt.pem)   |
+| Intermediate Certificate *(Alternative Option)* | DigiCert Intermediate G2 CA  | DigiCert Intermediate G2 CA  |
+| Yearly Server Certificate *(Alternative Option)* | [222-connect.nulogy.net.crt](222-connect.nulogy.net.pem) | [223-connect-na-qa.nulogy.net.crt](223-connect-na-qa.nulogy.net.crt)|
 
 Note: 
 
@@ -60,22 +60,16 @@ The files contained in this repository are as follows:
 - Expires January 2038
 - Currently for use with HTTPS/TLS connectivity to CNEDI and B2BI, for the Production environment
 
-#### [DigicertGlobalRootCA.crt.pem](DigicertGlobalRootCA.crt.pem) - TLS Digicert Root CA Certificate
-- Mirror of [DigiCert Global Root CA](https://www.digicert.com/kb/digicert-root-certificates.htm#:~:text=08%3A3B%3AE0%3A56%3A90%3A42%3A46%3AB1%3AA1%3A75%3A6A%3AC9%3A59%3A91%3AC7%3A4A), hosted here for convenience
-- No longer used to issue certificates after March 2023
-- Serial Number: 10944719598952040374951832963794454346 (`0x83be056904246b1a1756ac95991c74a`)
-- Expires November 2031
-- Currently for use with HTTPS/TLS connectivity to CNEDI and B2BI, for the UAT environment
 
-#### [221-connect-na-qa.nulogy.net.crt](221-connect-na-qa.nulogy.net.crt) - TLS Certificate for UAT Environment
+#### [223-connect-na-qa.nulogy.net.crt](223-connect-na-qa.nulogy.net.crt) - TLS Certificate for UAT Environment
 
 - Subject:`CN=connect-na-qa.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA` (Issuer: `CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`)
-- Serial Number: 5071367148915287984348724456423100702 (`0x3d0b5b47a110ca7b21b04dff657111e`)
-- Expires **February 2024**
+- Serial Number: 19806049027757082700868699962183856442 (`0xee6819c3cfb66e2ca5ff53e280d313a`)
+- Expires **January 2025**
 - Contents include:
   - Certificate (connect-na-qa.nulogy.net)
-  - Intermediate CA Certificate (DigiCert TLS RSA SHA256 2020 CA1)
-  - Root CA Certificate ([DigiCert Global Root CA](#digicertglobalrootcacrtpem---tls-digicert-root-ca-certificate))
+  - Intermediate CA Certificate (DigiCert Global G2 TLS RSA SHA256 2020 CA1)
+  - Root CA Certificate ([DigiCert Global Root G2](#digicertglobalrootg2crtpem---tls-digicert-root-g2-certificate))
 - Signed by Digicert
 - This is the `connect-na-qa.nulogy.net` server side certificates for our UAT environment
 - For use with CNEDI and B2Bi UAT
