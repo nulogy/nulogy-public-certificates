@@ -191,6 +191,20 @@ The files contained in this repository are as follows.
 - Expires November 2031
 - Currently for use with HTTPS/TLS connectivity to CNEDI and B2BI, for the UAT environment
 
+#### [222-connect.nulogy.net.crt](archive/222-connect.nulogy.net.pem) - TLS Certificate for Production Environment
+
+- Subject: `CN=connect.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA` (Issuer: `CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`)
+- Serial Number: 9034213788272798128800337420850908347 (`0x6cbed211256807796478204ef054cbb`)
+- Expires **August 2024**
+- Contents include:
+  - Certificate (connect.nulogy.net)
+  - Intermediate CA Certificate (DigiCert Global G2 TLS RSA SHA256 2020 CA1)
+  - Root CA Certificate ([DigiCert Global Root G2](#digicertglobalrootg2crtpem---tls-digicert-root-g2-certificate))
+- Signed by Digicert with SHA256
+- This is the `connect.nulogy.net` HTTPS/TLS certificate for our Production environment
+- For use with CNEDI and B2Bi Production
+
+
 ### Copyright
 
 The material in this repo is provided Copyright Nulogy Corporation 2022 - All Rights Reserved
