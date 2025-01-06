@@ -29,7 +29,7 @@ If you are connecting over HTTPS with SSL/TLS, you have the following options fo
 | - | ------------- | ------------- |
 | Root Certificate *(Preferred Option)*| [DigiCertGlobalRootG2.crt.pem](DigiCertGlobalRootG2.crt.pem) | [DigiCertGlobalRootG2.crt.pem](DigiCertGlobalRootG2.crt.pem)   |
 | Intermediate Certificate *(Alternative Option)* | DigiCert Intermediate G2 CA  | DigiCert Intermediate G2 CA  |
-| Yearly Server Certificate *(Alternative Option)* | [224-connect.nulogy.net.crt](224-connect.nulogy.net.pem) | [223-connect-na-qa.nulogy.net.crt](223-connect-na-qa.nulogy.net.crt)|
+| Yearly Server Certificate *(Alternative Option)* | [224-connect.nulogy.net.crt](224-connect.nulogy.net.pem) | [225-connect-na-qa.nulogy.net.crt](225-connect-na-qa.nulogy.net.crt)|
 
 
 #### Note: 
@@ -61,11 +61,11 @@ The files contained in this repository are as follows:
 - For use with HTTPS/TLS connectivity to CNEDI and B2BI, for both Production and UAT environments
 ---
 
-#### [223-connect-na-qa.nulogy.net.crt](223-connect-na-qa.nulogy.net.crt) - TLS Certificate for UAT Environment
+#### [225-connect-na-qa.nulogy.net.crt](225-connect-na-qa.nulogy.net.crt) - TLS Certificate for UAT Environment
 
 - Subject:`CN=connect-na-qa.nulogy.net,O=Nulogy Corporation,L=Toronto,ST=Ontario,C=CA` (Issuer: `CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1,O=DigiCert Inc,C=US`)
-- Serial Number: 19806049027757082700868699962183856442 (`0xee6819c3cfb66e2ca5ff53e280d313a`)
-- Expires **January 2025**
+- Serial Number: 12150082648166167976305470781804809040 (`0x9240553243800e2cdaea6f74c5c8b50`)
+- Expires **February 2026**
 - Contents include:
   - Certificate (connect-na-qa.nulogy.net)
   - Intermediate CA Certificate (DigiCert Global G2 TLS RSA SHA256 2020 CA1)
