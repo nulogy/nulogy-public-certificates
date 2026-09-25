@@ -13,7 +13,7 @@ These certificates allow AS2 and HTTPS communications with Nulogy's environment 
 
 ## Choosing a Certificate to Use
 
-### AS2 Certificates
+*IF* your connection is TLS (via HTTPS):
 
 If you are connecting over HTTP with AS2, you have the following options for Production and UAT environments.
 | Options  | Production  | UAT |
